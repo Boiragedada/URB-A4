@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URB-(A4)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="/star.png" type="image/x-icon">
+    <style>
+        .tab-active { background-color: #2563eb !important; color: white !important; }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] min-h-screen p-4 md:p-10 font-sans text-slate-900">
+
+    <div class="max-w-5xl mx-auto">
+        <h1 class="text-3xl font-bold mb-8">Job Application Tracker</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-gray-500 font-semibold text-sm">Total</p>
+                <h2 id="total-count" class="text-4xl font-bold mt-1">8</h2>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-gray-500 font-semibold text-sm">Interview</p>
+                <h2 id="int-count" class="text-4xl font-bold mt-1 text-emerald-600">0</h2>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-gray-500 font-semibold text-sm text-red-500">Rejected</p>
+                <h2 id="rej-count" class="text-4xl font-bold mt-1 text-red-600">0</h2>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-end mb-6">
+            <h2 class="text-2xl font-bold text-slate-700">Available Jobs</h2>
+            <p class="text-slate-400 font-medium"><span id="tab-job-count">8</span> jobs</p>
+        </div>
+
+        <div class="flex gap-2 mb-8 bg-gray-200 p-1 w-fit rounded-lg">
+            <button onclick="changeTab('all')" id="tab-all" class="tab-btn px-6 py-1.5 rounded-md font-semibold text-slate-600 transition-all tab-active">All</button>
+            <button onclick="changeTab('interview')" id="tab-interview" class="tab-btn px-6 py-1.5 rounded-md font-semibold text-slate-600 transition-all">Interview</button>
+            <button onclick="changeTab('rejected')" id="tab-rejected" class="tab-btn px-6 py-1.5 rounded-md font-semibold text-slate-600 transition-all">Rejected</button>
+        </div>
+
+        <div id="jobs-list" class="space-y-6"></div>
+    </div>
+
+    <script src="/script/java2.js"></script>
+</body>
+</html>
