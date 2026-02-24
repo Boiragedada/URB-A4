@@ -21,7 +21,7 @@ function renderJobs() {
     if (filtered.length === 0) {
         list.innerHTML = `
             <div class="flex flex-col items-center justify-center py-20 bg-white rounded-2xl border-2 border-dashed border-gray-200">
-                <img src="/file-icon.png" class="w-20 mb-4 opacity-30">
+                <img src="/file-icon.png" alt="fole-icon" class="w-20">
                 <h3 class="text-xl font-bold text-black">No jobs available</h3>
                 <p class="text-gray-400">Check back soon for new job opportunities.</p>
             </div>`;
